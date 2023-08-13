@@ -18,6 +18,7 @@ class LinearRegression(nn.Module):
         return self.linear(x)
 
 def pretty(vector):
+    # 用于将向量或数组格式化为可读的字符串表示
     if type(vector) is list:
         vlist = vector
     elif type(vector) is np.ndarray:
@@ -75,6 +76,7 @@ class MpModel:
         self.accumulate_mip_penalty = torch.tensor(np.zeros(10, dtype=np.float32))
 
     def renew(self):
+        # renew方法用于重置特征选择器和线性回归模型
         self.featureSelector.renew()
         self.mu = self.featureSelector.mu
         self.backmodel.weight_init()
@@ -83,6 +85,7 @@ class MpModel:
 
 
     def combine_envs(self, envs):
+        # combine_envs方法用于将多个环境的输入特征和标签组合成单个输入特征张量 X 和标签张量 y
         X = []
         y = []
         for env in envs:
