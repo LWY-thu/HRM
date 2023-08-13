@@ -145,4 +145,5 @@ def generate_test():
     return testing
 
 if __name__=="__main__":
+    a = 1
     Multi_env_selection_bias()
