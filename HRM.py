@@ -6,7 +6,6 @@ import numpy as np
 import os
 from sklearn.linear_model import LinearRegression
 
-# 123git
 
 class HRM:
     def __init__(self, front_params, back_params, X, y, test_X=None, test_y=None):
@@ -101,6 +100,7 @@ class EmpiricalRiskMinimizer(object):
 
 if __name__ == "__main__":
     all_weights = torch.tensor(np.zeros(10, dtype=np.float32))
+    test = 1
     average = 0.0
     std = 0.0
     seeds = 10
